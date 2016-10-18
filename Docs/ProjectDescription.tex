@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Colored Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Peter Wilson (herries.press@earthlink.net)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page compiles as is. If you wish to include this title page in 
+% another document, you will need to copy everything before 
+% \begin{document} into the preamble of your document. The title page is
+% then included using \titleBC within your document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[svgnames]{xcolor} % Required to specify font color
+
+\newcommand*{\plogo}{\fbox{Drexel University}} % Generic publisher logo
+
+\usepackage{graphicx} % Required for box manipulation
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\newcommand*{\rotrt}[1]{\rotatebox{90}{#1}} % Command to rotate right 90 degrees
+\newcommand*{\rotlft}[1]{\rotatebox{-90}{#1}} % Command to rotate left 90 degrees
+
+\newcommand*{\titleBC}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+
+\def\CP{\textit{\Huge Meet Me For Language}} % Title
+
+\settowidth{\unitlength}{\CP} % Set the width of the curly brackets to the width of the title
+{\color{LightGoldenrod}\resizebox*{\unitlength}{\baselineskip}{\rotrt{$\}$}}} \\[\baselineskip] % Print top curly bracket
+\textcolor{Sienna}{\CP} \\[\baselineskip] % Print title
+{\color{RosyBrown}\Large Profiles for Socializing via Language Learning} \\ % Tagline or further description
+{\color{LightGoldenrod}\resizebox*{\unitlength}{\baselineskip}{\rotlft{$\}$}}} % Print bottom curly bracket
+
+\vfill % Whitespace between the title and the author name
+
+{\Large\textbf{Priyasmita Bagchi}}\\ % Author name
+{\Large\textbf{Bahareh Shakibajahromi}}\\ % Author name
+{\Large\textbf{Mike Bok}}\\ % Author name
+{\Large\textbf{Ismail Kuru}}\\ % Author name
+
+\vfill % Whitespace between the author name and the publisher logo
+
+\plogo\\[0.5\baselineskip] % Publisher logo
+2016 % Year published
+
+\endgroup}
+
+%----------------------------------------------------------------------------------------
+%	BLANK DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{pdfpages}
+\usepackage{amssymb}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{stmaryrd}
+\usepackage{graphics,graphicx}
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{import}
+\usepackage{mathpartir}
+\usepackage{aliascnt}
+\usepackage{array}
+\usepackage{comment}
+\usepackage{indentfirst}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{tikz}
+\usepackage{environ}
+\usetikzlibrary{calc, shapes, backgrounds}
+\usepackage{verbatim}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usepackage{pgfplots}
+\usepackage{caption,capt-of}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{xcolor}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{Lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\usepackage{color}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\usepackage{multicol}
+\makeatletter
+
+\usepackage{tcolorbox}
+\usepackage{mdframed}
+%\input{colin_macros.tex}
+
+\mdfdefinestyle{MyFrame}{%
+    linecolor=blue,
+    outerlinewidth=2pt,
+    roundcorner=20pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=20pt,
+    innerleftmargin=20pt,
+    backgroundcolor=gray!50!white}
+
+\pgfplotsset{}
+\usetikzlibrary{shapes.geometric,arrows,fit,matrix,positioning}
+\tikzset
+{
+    treenode/.style = {circle, draw=black, align=center, minimum size=0.1cm},
+    subtree/.style  = {isosceles triangle, draw=black, align=center, minimum height=0.5cm, minimum width=0.5cm, shape border rotate=90, anchor=north}
+}
+
+\usetikzlibrary{graphs} % LaTeX
+\usetikzlibrary{arrows,automata}
+\usepackage{hyperref}
+
+\definecolor{sh_comment}{rgb}{0.12, 0.38, 0.18 } %adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
+\definecolor{sh_keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
+\definecolor{sh_string}{rgb}{0.06, 0.10, 0.98} % #101AF9
+
+
+\def\lstsmallmath{\leavevmode\ifmmode \scriptstyle \else  \fi}
+\def\lstsmallmathend{\leavevmode\ifmmode  \else  \fi}
+
+\lstset {
+ rulesepcolor=\color{black},
+ showspaces=false,showtabs=false,tabsize=2,
+ captionpos=b,
+ xleftmargin=0.7cm, xrightmargin=0.5cm,
+ lineskip=-0.3em,
+ linewidth=\linewidth,
+ language=C++,
+ basicstyle=\ttfamily,
+ keywordstyle=\color{blue}\ttfamily,
+ stringstyle=\color{red}\ttfamily,
+ commentstyle=\color{sh_comment}\ttfamily,
+ morecomment=[l][\color{magenta}]{\#},
+ escapeinside={<@}{@>}
+}
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+ %   backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    linewidth=\linewidth,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+\usepackage{amsmath}
+
+\begin{document}
+\pagestyle{empty} % Removes page numbers
+
+\titleBC % This command includes the title page
+\newpage
+\section{Motivation}
+This project aims providing a platform for users to learn and improve their non-native languages via socializing with other  people. It is a profile based platform which enables users to create their profiles and get matched to a language learning event. This platform provides not only a pure learning activity but also getting socialized via meet-ups of users in created events.
+\section{Functionality}
+\section{Development Infrastructure}
+\section{Architectural Infrastructure}
+\section{Maintainability}
+\end{document}
