@@ -201,27 +201,57 @@
 \titleBC % This command includes the title page
 \newpage
 \section{Motivation}
-This project aims providing a platform for users to learn and improve their non-native languages via socializing with other  people. It is a profile based platform which enables users to create their profiles and get matched to a language learning event. This platform provides not only a pure learning activity but also getting socialized via meet-ups of users in created events.
+This project aims providing a platform for users to learn and improve their non-native languages via socializing with other  people within a university. It is a profile based platform which enables users to create their profiles and get matched to a language learning event. This platform provides not only a pure learning activity but also getting socialized via meet-ups of users in created events.
 \section{Functionality}
 \subsection{Creating a Profile}
- \subsubsection{Qualification Aspect}
- \subsubsection{Lecturing Languages In Native}
- \subsubsection{Learning Languages}
- \subsection{Type of Lecturing Method}
- \subsection{Type of Learning Method}
-\subsection{Creating an Event}
-\subsubsection{Confirmation System} 
-\subsection{Event Notification System}
- \subsubsection{Guided Concrete Notification for User}
- \subsubsection{Guided Ghost Notification for User}
-\subsection{Review System}
-  \subsubsection{Commenting System}
-  \subsubsection{Ranking System}
+A user creates a profile to get involved in the platform.
+ \subsubsection{Indentification}Since this is a platform for university community, their employee, student identification number will be their user identification number. 
+ \subsubsection{Lecturing Languages In Native} Each user have languages that they are interested in teaching.  
+ \subsubsection{Learning Languages}Each user have languages that they are interested in learning.
+\subsection{Qualification Aspect} Each language stated in the profile, for teaching and learning, needs to be attached with a qualification, native, advanced, intermediate, basic etc.  
+ \subsection{Type of Lecturing Method} A user may want to meet with a group of people to teach. Maximum size of group needs to be identified. Besides, she may prefer to meet one-to-one for lecturing.
+ \subsection{Type of Learning Method}  A user may want to meet with a group of people to learn. Maximum size of group needs to be identified. Besides, she may prefer to meet one-to-one for learning.
+ \subsection{Type of Events to Involve} A user states the type of events that are interested in attending. For example, a user may not want to attend any outdoor event etc.
+ \subsection{Availability for Events} Each user states her available time intervals for the events.
+ \subsection{Events Attended} A user has list of events that she attended to lecture or learn. 
+ \subsection{Creating an Event} Teaching and learning activities are performed via events. A user can create an event for lecturing or learning.
+ \subsubsection{Event Description} Since it is an social activity, event creator needs to write the details of the event.
+ \subsubsection{Event Creator and Lecturers} Each event has a creator and lecturers. A lecturer can both a creator and lecturer of an event. 
+ \subsubsection{Event Type} Event are classified against couple of parameters such as:
+ \begin{itemize}
+ \item \textbf{Indoor/Outdoor}. Where is it going to be held? Is it an indoor or outdoor activity?
+   \item \textbf{Content of Event}. An indoor activity can be playing a game, having dinner etc.
+   \item \textbf{Any Payment}. Does it include any sort of payment such as everyone pays its dinner?
+     \item \textbf{Language Level of Audiance}. Level of audiance suggested to attend
+ \end{itemize}
+ \subsection{Event Notification System} Once an event is created or potential meet-up exists other users are notfied in a guided fashion.
+ \subsubsection{Guided Concrete Notification for User} Once an event is created filtered notifications are sent according to the preferences of an user. For example, a available time, type of event, level of the event are used for filtering the notifications for a user.
+ \subsubsection{Guided Ghost Notification for User} If common interests for type of events in common available time exists for couple of  people, a notfication is sent to create an event.
+ \subsection{Confirmation System} 
+ Once the event created set of users/a single user gets notification for the event and
+ \begin{itemize}
+ \item After getting notified for an event a user may send a request for being an lecturer or learner for this event.
+ \item A creator can get buch of request for being lecturer/learner for the event. Creator builds the group/single user among the requests.
+   \item People who are confirmed by creator are notified for confirmation of thier attendance.
+   \item Limits of the group (number of lecturers and learners) are specified.
+   \end{itemize}
+ \subsection{Review System}
+ Once the event is over, users can review via using two methods.
+ \subsubsection{Commenting System} Commenting system can provide a way of reviewing the issues which are not quantified/qualified with teaching/learning activities. For example, an attendee may not be polite to other attendees and this may be mentioned in a comment. 
+ \subsubsection{Ranking System}
+  \begin{itemize}
+ \item \textbf{Event}. Event creator can be review by other users.
+ \item \textbf{Lecturer}. Lecturers can be reviwed by other users.
+  \end{itemize}
+........... Ismail : doc is filled up to this point .
+  
 \section{Development Infrastructure}
- \subsection{Programming Languages}
- \subsection{Integrated Development Environment}
- \subsection{Testing Infrastructure}
-\section{Architectural Infrastructure}
+\subsection{Programming Languages}
+\subsubsection{Front-End} Java-Script, PHP and HTML. Mike what do you think about front-end? Do you have suggestions ?
+\subsubsection{Backend} Java
+ \subsection{Integrated Development Environment} Eclipse, Netbeans etc. I am going to use Emacs :)
+ \subsection{Testing Infrastructure} I used many mocking unit test environments we can use one of them for example mockito. We can write invariants for the system, pre-post conditions for methods etc.  
+\section{Architectural Infrastructure} Priyasmita is going handle this part?
  \subsection{Data Base System}
  \subsection{Web Server}
 \section{Maintainability}
