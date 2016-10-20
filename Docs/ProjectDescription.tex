@@ -31,7 +31,13 @@
 \newcommand*{\plogo}{\fbox{Drexel University}} % Generic publisher logo
 
 \usepackage{graphicx} % Required for box manipulation
-
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -200,7 +206,7 @@
 
 \titleBC % This command includes the title page
 \newpage
-\section{Motivation}
+\section{Description}
 This project aims providing a platform for users to learn and improve their non-native languages via socializing with other  people within a university. It is a profile based platform which enables users to create their profiles and get matched to a language learning event. This platform provides not only a pure learning activity but also getting socialized via meet-ups of users in created events.
 \section{Functionality}
 \subsection{Creating a Profile}
@@ -243,16 +249,31 @@ A user creates a profile to get involved in the platform.
  \item \textbf{Event}. Event creator can be review by other users.
  \item \textbf{Lecturer}. Lecturers can be reviwed by other users.
   \end{itemize}
-........... Ismail : doc is filled up to this point .
-  
 \section{Development Infrastructure}
 \subsection{Programming Languages}
-\subsubsection{Front-End} Java-Script, PHP and HTML. Mike what do you think about front-end? Do you have suggestions ?
-\subsubsection{Backend} Java
- \subsection{Integrated Development Environment} Eclipse, Netbeans etc. I am going to use Emacs :)
- \subsection{Testing Infrastructure} I used many mocking unit test environments we can use one of them for example mockito. We can write invariants for the system, pre-post conditions for methods etc.  
-\section{Architectural Infrastructure} Priyasmita is going handle this part?
- \subsection{Data Base System}
- \subsection{Web Server}
-\section{Maintainability}
+\subsubsection{Front-End} Java-Script, PHP and HTML. [Mike,Bahareh] what do you think about front-end? Do you have suggestions ?
+\subsubsection{Backend} Java is going to be our main development language for backend functionalities. 
+ \subsection{Integrated Development Environment} We do not have our final decision yet but it is going to be one of IntelliJ/Eclipse/Netbeans. 
+ \subsection{Testing Infrastructure} There are couple of important points that we consider for testing infrastructure:
+ \begin{itemize}
+ \item We target using as much machinery as possible instead of human effort on generating specifications/test cases for functional correctness . Generating automated pre/post conditions, generating invatiants for modules in Class granularity.
+   \item We have currently couple of options for machinery of testing infrastructure. Arquilian, The Grinder, Mockito or PowerMock can be one of our Java side testing frameworks. Arquilian enables you easily to create functional, integration and acceptance tests. However, we have experience on using Mock-Object-Based testing so we can also use PowerMock or Mockito.   
+ \end{itemize}
+\section{Architectural Infrastructure} [Priyasmita] is going to write this part.
+ \subsection{Data Base System} [Priyasmita] is going to write this part.
+ \subsection{Web Server} [Priyasmita] is going to write this part.
+ \section{Maintainability}
+ \begin{itemize}
+   \item \textbf{Design}. We target a modular design which enables us to maintain the code base from the following aspects.
+     \begin{itemize}
+     \item \textbf{Bug Isolation}. Our modular design provides localization of bugs so that refinement can be made fast.
+     \item \textbf{Extensibilty}.  Our modular design provides fast integration for new features.
+     \end{itemize}
+   \item \textbf{Code Reviews}. We review the source code of a written feature in function granularity. This review can be requested from implementer or any other group member can pick an update and review it.   
+   \item \textbf{Readable Code}. We use a structured naming convention. We follow rules on style of commenting, size of class methods etc. 
+   \item \textbf{Integration/Acceptance Tests}. We use integration tests to make building and functionality testing  easier. We use regression tests for accepting a new feature to the system.
+   \item \textbf{Version Control/Hosting}. We use version control and integrated issue tracking system. This enables us to keep hierarchy on status of stability of software. We keep release, in-test and in-development versions in repository. We use git as version control system and GitHub as remote repo client. Our repo is publicly available and resides at \href{https://github.com/ismailkuru/MeetMeForLang}{MeetMeForLang}.  
+     \item \textbf{Issue Tracking}. We use issue tracking system integrated with GitHub client. We create issue with domain tags such as "Backend", "Testing", "FrontEnd" or "Documentation" so that related implementer can attack the issue fast. 
+   \end{itemize}
+ 
 \end{document}
